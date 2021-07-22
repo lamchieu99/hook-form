@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { Button } from '@material-ui/core';
+import { useState } from 'react';
 import './App.css';
+import Information from './pages/Information';
+
 
 function App() {
+  const [show, setShow] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        show ? <Information /> : null
+      }
+      <Button className="show" onClick={() => setShow(!show)} variant="outlined" color="primary">
+        Information
+      </Button>
     </div>
   );
 }

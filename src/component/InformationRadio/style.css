@@ -1,0 +1,13 @@
+ .MuiFormGroup-root {
+    flex-direction: row !important
+    
+}
+.MuiFormControlLabel-root {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+
+}
+
+.MuiFormGroup-root > .MuiFormControlLabel-root {
+    margin-right: 30px !important;
+}
